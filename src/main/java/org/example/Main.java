@@ -27,6 +27,6 @@ public class Main {
         System.out.println(list.size());
 
         Drawer drawer = new Drawer(scaledList, height);
-        drawer.draw(height + 40, maxXValue.intValue());
+        drawer.draw(height + 80, maxXValue.intValue());
     }
 }

@@ -1,5 +1,6 @@
 package org.example.utils;
 
+import org.example.Main;
 import org.example.model.Tuple;
 
 import javax.swing.*;
@@ -23,6 +24,7 @@ public class Drawer extends JPanel {
             g.fillOval(i, height/2, 5, 3);
         }
 
+
         for (Tuple tuple : tupleList) {
 
             int x = (int) Math.round(tuple.t());
@@ -34,6 +36,10 @@ public class Drawer extends JPanel {
             g.fillOval(x, y1, diameter, diameter);
             g.setColor(Color.BLUE);
             g.fillOval(x, y2, diameter, diameter);
+        }
+
+        for (int i = 0; i < tupleList.size(); i+=10) {
+           g.drawString(String.valueOf(i), (int) Math.round(tupleList.get(i).t()), 440);
         }
 
     }
