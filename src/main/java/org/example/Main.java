@@ -1,13 +1,16 @@
 package org.example;
 
 import org.example.model.Constants;
+import org.example.utils.Calculator;
 import org.example.utils.MyFunction;
 
 public class Main {
-    public static void main(String[] args) {
-        var y = Constants.Y_ZERO.get();
-        var yi = 0.0;
+    private MyFunction myFunction;
 
-        System.out.println(MyFunction.apply(y, yi, 0.0));
+
+    public static void main(String[] args) {
+        Calculator calculator = new Calculator();
+        var list = calculator.calculate(15);
+        list.forEach(System.out::println);
     }
 }

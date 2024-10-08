@@ -1,9 +1,12 @@
 package org.example.utils;
 
 import org.example.model.Constants;
+import org.example.model.Tuple;
+
+import java.util.function.Function;
 
 
-public class MyFunction  {
+public class MyFunction {
 
     public static Double apply(Double y, Double yi, Double t) {
         double sin = Math.sin(Constants.OMEGA.get() * t);
