@@ -26,7 +26,6 @@ public class Calculator {
                 .map(pair -> {
                     var speed = speedFunction.apply(yi.get(), pair.yii());
                     var position = positionFunction.apply(y.get(), yi.get());
-                    System.out.printf("%f %f%n", y.get(), yi.get());
 
                     y.set(position);
                     yi.set(speed);
