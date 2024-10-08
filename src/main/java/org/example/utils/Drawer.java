@@ -37,6 +37,12 @@ public class Drawer extends JPanel {
             g.setColor(Color.BLUE);
             g.fillOval(x, y2, diameter, diameter);
         }
+        g.setColor(Color.BLACK);
+        g.drawString("yi", 50, 15);
+        g.fillRect(65, 5, 20, 15);
+        g.drawString("y", 5, 15);
+        g.setColor(Color.BLUE);
+        g.fillRect(15, 5, 20, 15);
 
         for (int i = 0; i < tupleList.size(); i+=10) {
            g.drawString(String.valueOf(i), (int) Math.round(tupleList.get(i).t()), 440);
