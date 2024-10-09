@@ -1,21 +1,13 @@
 package org.example;
 
-import org.example.model.Constants;
-import org.example.model.Tuple;
-import org.example.utils.Calculator;
 import org.example.utils.Drawer;
-import org.example.utils.MyFunction;
+import org.example.utils.LibCalculator;
 import org.example.utils.Scale;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class Main {
-    private MyFunction myFunction;
-
 
     public static void main(String[] args) {
-        Calculator calculator = new Calculator();
+        var calculator = new LibCalculator();
         Scale scale = new Scale();
 
         var list = calculator.calculate(180);

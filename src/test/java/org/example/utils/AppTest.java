@@ -17,34 +17,7 @@ class AppTest {
             "0.152,0.0,8.0,-0.0198716"
     })
     public void test_Function(double y, double yi, double step, double expected) {
-        var result = MyFunction.apply(y, yi, step);
+        var result = Equation.apply(y, yi, step);
         Assertions.assertEquals(expected, result, epsilon);
     }
-
-    @ParameterizedTest
-    @CsvSource({
-            "0.0,-0.148488192,-0.0074244",
-            "-0.007424,-0.141751,-0.01451195",
-            "-0.01451194,-0.134387,-0.0212313"
-    })
-    public void test_Speed(double yi, double yii, double excepted) {
-        var function = new Speed();
-        var result = function.apply(yi, yii);
-        Assertions.assertEquals(excepted, result, epsilon);
-
-    }
-
-    @ParameterizedTest
-    @CsvSource({
-            "0.152,0.0,0.152",
-            "0.152,-0.007424,0.1516288",
-            "0.151629,-0.014512,0.1509034"
-    })
-    public void test_Position(double y, double yi, double excepted) {
-
-        var function = new Position();
-        var result = function.apply(y, yi);
-        Assertions.assertEquals(excepted, result, epsilon);
-    }
-
 }
